@@ -1,0 +1,5 @@
+<Alloy>
+	<View id="profile">
+	    <Label text="Profile View" />
+	</View>
+</Alloy>

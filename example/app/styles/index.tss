@@ -1,0 +1,93 @@
+".container": {
+	backgroundColor: "#FFF",
+	exitOnClose: true
+}
+
+"#navDrawer": {
+	overlayShadow: true, // Fade out menu on close
+	menuWidth: 250, // Slide menu width
+	duration: 200, // Close/open animation duration
+	ledge: 40, // Ledge size
+}
+
+"#menu": {
+	height: Ti.UI.FILL,
+	backgroundColor: "#29444e",
+	
+}
+
+"#menuTable": {
+	top: Alloy.Globals.marginTop,
+	backgroundColor: "#29444e",
+	separatorColor: "transparent"
+}
+
+"TableViewRow": {
+	height: 50
+}
+
+"TableView[platform=ios]": {
+	separatorStyle: Titanium.UI.iPhone.TableViewSeparatorStyle.NONE
+}
+
+".menuRowProfile": {
+	height: Ti.UI.SIZE,
+	layout: "vertical"
+}
+
+".profileImg": {
+	height: 64,
+	width: 64,
+	top: 15,
+	borderColor: "#FFF",
+	borderWidth: 2,
+	borderRadius: 4,
+	touchEnabled: false
+}
+
+".userName": {
+	top: 10,
+	color: "#ecf0f1",
+	font: {
+		fontSize: "16sp",
+		fontWeight: "bold"
+	},
+	touchEnabled: false
+}
+
+
+".userNickname": {
+	bottom: 15,
+	color: "#95a5a6",
+	font: {
+		fontSize: "14sp"
+	},
+	touchEnabled: false
+}
+
+".borderTopLine": {
+	top: 0,
+	width: Ti.UI.FILL,
+	height: '1px',
+	backgroundColor: "#3a606f",
+    touchEnabled: false
+}
+".borderBottomLine": {
+	bottom: 0,
+	width: Ti.UI.FILL,
+	height: '1px',
+	backgroundColor: "#142126",
+    touchEnabled: false
+}
+
+".menuItem": {
+	left: 15,
+	height: Ti.UI.SIZE,
+	color: "#FFF",
+	font: {
+		fontWeight: "bold",
+		fontSize: "16sp"
+	},
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	touchEnabled: false
+}

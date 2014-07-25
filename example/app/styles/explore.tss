@@ -1,0 +1,11 @@
+"#explore": {
+	backgroundColor: "#ecf0f1"
+}
+
+"Label": {
+	color: "#3498db",
+	font: {
+		fontSize: "32sp",
+		fontWeight: "bold"
+	}
+}

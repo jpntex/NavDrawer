@@ -1,0 +1,11 @@
+"#profile": {
+	backgroundColor: "#ecf0f1"
+}
+
+"Label": {
+	color: "#f39c12",
+	font: {
+		fontSize: "32sp",
+		fontWeight: "bold"
+	}
+}

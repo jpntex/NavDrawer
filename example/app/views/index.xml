@@ -1,0 +1,26 @@
+<Alloy>
+	<Widget id="navDrawer" src="com.jpntex.navdrawer">
+		<View id="menu" role="menu">
+		    <TableView id="menuTable">
+		    	<TableViewRow class="menuRowProfile" onClick="openProfile">
+		    		<ImageView class="profileImg" image="/profile.jpg" />
+					<Label class="userName" text="Scarlett Johansson" />
+					<Label class="userNickname" text="badkitty" />
+					<View class="borderBottomLine" />
+		    	</TableViewRow>
+		    	<TableViewRow onClick="openExplore">
+		    		<View class="borderTopLine" />
+					<Label class="menuItem" text="Explore" />
+	                <View class="borderBottomLine" />
+		    	</TableViewRow>
+		    	<TableViewRow onClick="openShop">
+		    		<View class="borderTopLine" />
+					<Label class="menuItem" text="Shop" />
+	                <View class="borderBottomLine" />
+		    	</TableViewRow>
+		    </TableView>
+		</View>
+
+		<View role="main"></View>
+	</Widget>
+</Alloy>

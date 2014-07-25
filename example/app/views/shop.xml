@@ -1,0 +1,5 @@
+<Alloy>
+	<View id="shop">
+	    <Label text="Shop View" />
+	</View>
+</Alloy>

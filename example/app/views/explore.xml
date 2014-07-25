@@ -1,0 +1,6 @@
+<Alloy>
+	<View id="explore">
+	    <Label text="Explore View" />
+	    <Button bottom="100" title="Toggle Drawer" onClick="toggleMenu" />
+	</View>
+</Alloy>

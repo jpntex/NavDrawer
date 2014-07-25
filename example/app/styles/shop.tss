@@ -1,0 +1,11 @@
+"#shop": {
+	backgroundColor: "#ecf0f1"
+}
+
+"Label": {
+	color: "#e74c3c",
+	font: {
+		fontSize: "32sp",
+		fontWeight: "bold"
+	}
+}
