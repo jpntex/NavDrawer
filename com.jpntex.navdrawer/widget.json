@@ -1,0 +1,13 @@
+{
+	"id": "com.jpntex.navdrawer",
+	"name": "com.jpntex.navdrawer",
+	"description" : "A simple navigation sliding side menu.",
+	"author": "João Teixeira",
+	"version": "0.2",
+	"copyright":"Copyright (c) 2014",
+	"license":"MIT",
+	"min-alloy-version": "1.0",
+	"min-titanium-version":"3.0",
+	"tags":"slide,drawer,navigation,facebook,menu,side",
+	"platforms":"android,ios"
+}
