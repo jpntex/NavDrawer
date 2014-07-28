@@ -5,7 +5,19 @@
 The NavDrawer widget is a simple sliding side menu.
 The widget is licensed under the MIT license.
 
+### DEMO
+![NavDrawer Demo](/example/example.gif?raw=true)
+
+## Quick Start
+
+### Get it [![gitTio](http://gitt.io/badge.png)](http://gitt.io/component/dk.napp.drawer)
+Download the latest distribution ZIP-file and consult the [Titanium Documentation](http://docs.appcelerator.com/titanium/latest/#!/guide/Using_a_Module) on how install it, or simply use the [gitTio CLI](http://gitt.io/cli):
+
+`$ gittio install com.jpntex.navdrawer`
+
 ## Usage
+(please jump to step 3 if you are using gitTio)
+
 1. Copy the folder `/com.jpntex.navdrawer` to your `/app/widgets/`
 
 2. In your `/app/config.json` add the widget to the dependencies:
