@@ -26,7 +26,7 @@ Download the latest distribution ZIP-file and consult the [Titanium Documentatio
 
 3. In your `app/views/index.xml` use it like this:
 
-    ```
+    ```xml
     <Alloy>
         <Widget id="navDrawer" src="com.jpntex.navdrawer">
             <View role="menu">
@@ -39,7 +39,7 @@ Download the latest distribution ZIP-file and consult the [Titanium Documentatio
     ```
 
 4. In your `app/styles/index.js`:
-    ```
+    ```javascript
     $.navDrawer.open();
     
     var view = Ti.UI.createView({
@@ -51,7 +51,7 @@ Download the latest distribution ZIP-file and consult the [Titanium Documentatio
     ```    
 
 5. In your `app/styles/index.tss`:
-    ```
+    ```css
     "#navDrawer": {
     	overlayShadow: true, // Fade out menu on close
     	menuWidth: 250, // Slide menu width
@@ -62,7 +62,7 @@ Download the latest distribution ZIP-file and consult the [Titanium Documentatio
 
 ## License
 ```
-Copyright (c) 2014 João Teixeira
+Copyright (c) João Teixeira
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
