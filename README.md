@@ -51,7 +51,7 @@ Download the latest distribution ZIP-file and consult the [Titanium Documentatio
     ```    
 
 5. In your `app/styles/index.tss`:
-    ```css
+    ```javascript
     "#navDrawer": {
     	overlayShadow: true, // Fade out menu on close
     	menuWidth: 250, // Slide menu width
