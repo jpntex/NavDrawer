@@ -11,7 +11,7 @@ The widget is licensed under the MIT license.
 ## Quick Start
 
 ### Get it [![gitTio](http://gitt.io/badge.png)](http://gitt.io/component/com.jpntex.navdrawer)
-Download the latest distribution ZIP-file and consult the [Titanium Documentation](http://docs.appcelerator.com/titanium/latest/#!/guide/Using_a_Module) on how install it, or simply use the [gitTio CLI](http://gitt.io/cli):
+Download the latest distribution ZIP-file and consult the [Titanium Documentation](http://docs.appcelerator.com/titanium/latest/#!/guide/Alloy_XML_Markup-section-35621528_AlloyXMLMarkup-ImportingWidgets) on how install it, or simply use the [gitTio CLI](http://gitt.io/cli):
 
 `$ gittio install com.jpntex.navdrawer`
 
