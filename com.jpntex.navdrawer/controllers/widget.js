@@ -288,7 +288,9 @@ exports.changeView = function(view) {
 		}
 	}
 
-	closeMenu();
+	if (menuOpen) {
+		closeMenu();
+	}
 };
 
 exports.toggleMenu = function() {
@@ -302,3 +304,20 @@ exports.toggleMenu = function() {
 exports.open = function() {
 	win.open();
 };
+
+// window events
+exports.on = function(event, callback) {
+	return win.addEventListener(event, callback);
+};
+
+exports.off = function(event, callback) {
+	return win.removeEventListener(event, callback);
+};
+
+exports.trigger = function(event, args) {
+	return win.fireEvent(event, args);
+};
+
+exports.addEventListener = exports.on;
+exports.removeEventListener = exports.off;
+exports.fireEvent = exports.trigger;
