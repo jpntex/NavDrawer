@@ -8,6 +8,6 @@
     "os:ios": {},
     "os:mobileweb": {},
     "dependencies": {
-        "com.jpntex.navdrawer": "0.2"
+        "com.jpntex.navdrawer": "0.3"
     }
 }

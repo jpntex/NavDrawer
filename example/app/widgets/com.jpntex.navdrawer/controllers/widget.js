@@ -1,5 +1,7 @@
 var args = arguments[0] || {};
 
+// HELPERS
+
 // pixel/dpi ratio
 var pxdpi = (Ti.Platform.displayCaps.dpi / 160);
 
@@ -11,7 +13,10 @@ function DpiToPx(dpi) {
 	return (dpi * pxdpi);
 }
 
-// drawer options
+// IOS 7 marginTop
+var marginTop = (OS_IOS && parseInt(Ti.Platform.version[0], 10) >= 7) ? 20 : 0;
+
+// Drawer options
 var defaults = {
 	menuWidth: 250,
 	ledge: 40,
@@ -41,8 +46,6 @@ delete args.children;
 
 var options = _.extend({}, defaults, args);
 
-var marginTop = (OS_IOS && parseInt(Ti.Platform.version[0], 10) >= 7) ? 20 : 0;
-
 // assign window and views
 var win = (options.win) ? options.win : Ti.UI.createWindow({
 		navBarHidden: true,
@@ -59,7 +62,7 @@ var win = (options.win) ? options.win : Ti.UI.createWindow({
 	}),
 	menuView = (options.menuView) ? options.menuView : Ti.UI.createView({
 		height: Ti.UI.FILL,
-		top: 0,
+		top: marginTop,
 		left: 0,
 		backgroundColor: '#333'
 	}),
@@ -273,6 +276,13 @@ win.add(menuWrapper);
 win.add(mainView);
 win.add(menuView);
 
+// detach on close
+win.addEventListener('close', function() {
+	menuWrapper.removeEventListener('touchstart', touchStartHandler);
+	menuWrapper.removeEventListener('touchmove', touchMoveHandler);
+	menuWrapper.removeEventListener('touchend', touchEndHandler);
+});
+
 exports.changeView = function(view) {
 	if (currentView === null) {
 		currentView = view;
@@ -285,7 +295,9 @@ exports.changeView = function(view) {
 		}
 	}
 
-	closeMenu();
+	if (menuOpen) {
+		closeMenu();
+	}
 };
 
 exports.toggleMenu = function() {
@@ -296,6 +308,31 @@ exports.toggleMenu = function() {
 	}
 };
 
-exports.open = function() {
-	win.open();
+// window methods
+_.each([
+	'open',
+	'close'
+], function(fn) {
+	if (!exports[fn]) {
+		exports[fn] = function() {
+			return win[fn]();
+		};
+	}
+});
+
+// window events
+exports.on = function(event, callback) {
+	return win.addEventListener(event, callback);
 };
+
+exports.off = function(event, callback) {
+	return win.removeEventListener(event, callback);
+};
+
+exports.trigger = function(event, args) {
+	return win.fireEvent(event, args);
+};
+
+exports.addEventListener = exports.on;
+exports.removeEventListener = exports.off;
+exports.fireEvent = exports.trigger;

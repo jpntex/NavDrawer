@@ -20,3 +20,12 @@ function openShop() {
 	var view = Alloy.createController('shop').getView();
 	$.navDrawer.changeView(view);
 }
+
+function openHome(e) {
+	e.cancelBubble = true;
+	openExplore();
+}
+
+if (OS_ANDROID) {
+	$.navDrawer.on('android:back', openHome);
+}
