@@ -276,6 +276,13 @@ win.add(menuWrapper);
 win.add(mainView);
 win.add(menuView);
 
+// detach on close
+win.addEventListener('close', function() {
+	menuWrapper.removeEventListener('touchstart', touchStartHandler);
+	menuWrapper.removeEventListener('touchmove', touchMoveHandler);
+	menuWrapper.removeEventListener('touchend', touchEndHandler);
+});
+
 exports.changeView = function(view) {
 	if (currentView === null) {
 		currentView = view;
@@ -301,9 +308,17 @@ exports.toggleMenu = function() {
 	}
 };
 
-exports.open = function() {
-	win.open();
-};
+// window methods
+_.each([
+	'open',
+	'close'
+], function(fn) {
+	if (!exports[fn]) {
+		exports[fn] = function() {
+			return win[fn]();
+		};
+	}
+});
 
 // window events
 exports.on = function(event, callback) {
