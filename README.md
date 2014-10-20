@@ -22,7 +22,7 @@ Download the latest distribution ZIP-file and consult the [Titanium Documentatio
 
 2. In your `/app/config.json` add the widget to the dependencies:
 
-    `"com.jpntex.navdrawer": "0.2"`
+    `"com.jpntex.navdrawer": "0.3"`
 
 3. In your `app/views/index.xml` use it like this:
 

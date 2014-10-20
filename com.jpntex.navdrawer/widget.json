@@ -3,7 +3,7 @@
 	"name": "com.jpntex.navdrawer",
 	"description" : "A simple navigation sliding side menu.",
 	"author": "João Teixeira",
-	"version": "0.2",
+	"version": "0.3",
 	"copyright":"Copyright (c) 2014",
 	"license":"MIT",
 	"min-alloy-version": "1.0",
